@@ -1,0 +1,77 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body {
+    overflow-x: hidden;
+}
+
+.container {
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+}
+
+.container img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    pointer-events: none;
+}
+
+#hill1 {
+    height: 110%;
+}
+
+#hill2 {
+    height: 70%;
+
+}
+
+#hill3 {
+    height: 110%;
+}
+
+#hill4 {
+    height: 120%;
+    position: sticky;
+    top: 0;
+    left: 0;
+    z-index: 0;
+}
+
+#leaf{
+    height: 100%;
+    margin-left: 1000px;
+    top: -12px !important;
+}
+
+#tree{
+    height: 116%;
+    margin-left: 1000px;
+}
+
+#text{
+    position: absolute;
+    font-size: 5rem;
+    color: white;
+    text-shadow: 1px 2px 4px black;
+}
+
+.bottom-para{
+    position: relative;
+    padding: 150px;
+    background: #fff;
+}
+
+.bottom-para h2{
+    color: black;
+    font-size: 3rem;
+    font-weight: bold;
+    padding: 1rem 0rem;
+}
