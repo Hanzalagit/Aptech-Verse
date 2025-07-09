@@ -4,6 +4,10 @@
     box-sizing: border-box;
 }
 
+html {
+    scroll-behavior: smooth;
+}
+
 body {
     overflow-x: hidden;
 }
@@ -25,11 +29,11 @@ body {
 }
 
 #hill1 {
-    height: 110%;
+    height: 75vw;
 }
 
 #hill2 {
-    height: 70%;
+    height: 50%;
 
 }
 

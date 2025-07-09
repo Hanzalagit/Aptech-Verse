@@ -52,14 +52,3 @@ nav.addEventListener('mousemove', function (e) {
 nav.addEventListener('mouseleave', function () {
   nav.style.transform = 'translateX(0%) rotateY(0deg) rotateX(0deg)';
 });
-
-// Footer
-window.addEventListener('scroll', () => {
-  const footer = document.querySelector('.footer-content');
-  const footerTop = footer.getBoundingClientRect().top;
-  const windowHeight = window.innerHeight;
-
-  if (footerTop < windowHeight - 100) {
-    footer.classList.add('show');
-  }
-});
