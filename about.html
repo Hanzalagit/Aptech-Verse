@@ -30,8 +30,7 @@
         </div>
     </header>
     <div class="container">
-        <img src="assets/images/paralex/building4.png" id="building" alt="building">
-        <img src="assets/images/paralex/tree.png" id="tree" alt="tree">
+        <iframe src='https://my.spline.design/roomrelaxingcopy-8i3YL3MlmyoikEUkLSowtAWP/' frameborder='0' width='100%' height='100%'></iframe>
         <h2 id="text">About Us</h2>
         <br><br><br>
         <p id="about" style="line-height: 1.6;">Aptech Pakistan is a premier institute for technical education,
@@ -43,7 +42,6 @@
         <!-- </p><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
         <p id="about">At Aptech Pakistan, we offer a wide range of technical <br> education courses, including Information Technology, <br> Multimedia & Animation, Hardware & Networking, and <br> Aviation & Hospitality. Our courses are designed to provide <br> students with a rigorous and challenging learning experience <br> that prepares them for the real-world challenges they will face <br> in their careers. -->
         </p>
-        <img src="assets/images/paralex/leaf.png" id="leaf" alt="leaf">
     </div>
     <section class="pagetitle aboutPage" style="padding: 6rem 5rem 1rem;">
         <div class="bottom-para">
@@ -180,18 +178,12 @@
     <script>
         const text = document.getElementById("text");
         const about = document.getElementById("about");
-        const building = document.getElementById("building");
-        const tree = document.getElementById("tree");
-        const leaf = document.getElementById("leaf");
 
         window.addEventListener("scroll", () => {
             const scrollY = window.scrollY;
 
             text.style.transform = `translateY(${scrollY * 1.5}px)`;
             about.style.transform = `translateY(${scrollY * 1.5}px)`;
-            building.style.transform = `translateX(${scrollY * 0.2}px)`;
-            tree.style.transform = `translateX(${scrollY * 0.6}px)`;
-            leaf.style.transform = `translateY(${-scrollY * 0.8}px)`;
         });
         const counters = document.querySelectorAll(".counter");
         let started = false; // ensures it only runs once

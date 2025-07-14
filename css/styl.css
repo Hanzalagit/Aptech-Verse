@@ -534,6 +534,80 @@
            content: 'next';
        }
 
+       #chatbot-trigger {
+           position: fixed;
+           bottom: 20px;
+           right: 20px;
+           width: 60px;
+           height: 60px;
+           cursor: pointer;
+           z-index: 9999;
+       }
+
+       #chatbot-trigger img {
+           width: 100%;
+           height: 100%;
+           animation: float 2s ease-in-out infinite;
+       }
+
+       @keyframes float {
+           0% {
+               transform: translateY(0);
+           }
+
+           50% {
+               transform: translateY(-6px);
+           }
+
+           100% {
+               transform: translateY(0);
+           }
+       }
+
+       #chatbot-modal {
+           position: fixed;
+           bottom: 100px;
+           right: 30px;
+           width: 300px;
+           max-height: 450px;
+           background: #1a1a1a;
+           color: white;
+           border-radius: 10px;
+           box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
+           overflow: hidden;
+           display: none;
+           flex-direction: column;
+           z-index: 10000;
+       }
+
+       .chatbot-header {
+           padding: 10px 15px;
+           background: #ffb700;
+           color: #000;
+           display: flex;
+           justify-content: space-between;
+           align-items: center;
+       }
+
+       .chatbot-body {
+           padding: 15px;
+           overflow-y: auto;
+           height: 300px;
+       }
+
+       #close-chat {
+           cursor: pointer;
+           font-size: 1.3rem;
+       }
+
+       button {
+           padding: 5px 10px;
+           background: #0a84ff;
+           color: white;
+           border: none;
+           cursor: pointer;
+       }
+
        @media (max-width: 992px) {
            .testimonial-grid-container {
                flex-direction: column;
