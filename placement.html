@@ -1,0 +1,494 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Aptech Verse | Placement</title>
+    <link rel="icon" type="image/png" href="https://aptech-education.com.pk/assets/images/favicon.png">
+    <link rel="stylesheet" href="css/styl.css">
+    <link rel="stylesheet" href="css/chatbot.css">
+    <script> window.chtlConfig = { chatbotId: "6587938189" } </script>
+    <script async data-id="6587938189" id="chtl-script" type="text/javascript"
+        src="https://chatling.ai/js/embed.js"></script>
+    <style>
+        body,
+        html {
+            height: 100%;
+            width: 100%;
+            font-family: Arial, sans-serif;
+            overflow-x: hidden;
+            background-color: var(--bg-color);
+        }
+
+        .news-section {
+            height: 100vh;
+            width: 100%;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .news-title {
+            position: absolute;
+            bottom: 50px;
+            width: 100%;
+            text-align: left;
+            left: 30px;
+            z-index: 2;
+            color: white;
+            background-color: transparent !important;
+            margin: auto;
+            font-size: 4.5rem;
+            font-weight: 600;
+        }
+
+        .news-title h1 {
+            font-size: 3.5rem;
+            letter-spacing: 1px;
+            text-shadow: -3px 1px black;
+            color: #ffb400;
+            margin: 2px;
+        }
+
+        .news-title p {
+            font-size: 2.2rem;
+            color: white;
+            text-shadow: 2px 1px black;
+        }
+
+        video {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            z-index: 1;
+        }
+
+        .hero-section {
+            height: 100vh;
+            background-image: url('assets/images/Placement/partners.jpg');
+            background-attachment: fixed;
+            /* This makes the background fixed while scrolling */
+            background-position: center;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            position: relative;
+            text-align: center;
+            width: auto;
+        }
+
+        .row {
+            --bs-gutter-x: 1.5rem;
+            --bs-gutter-y: 0;
+            display: flex;
+            flex-wrap: wrap;
+            margin-top: 15px;
+            margin-right: calc(-.5 * var(--bs-gutter-x));
+            margin-left: calc(-.5 * var(--bs-gutter-x));
+            justify-content: center !important;
+        }
+
+        .form-control {
+            display: block;
+            width: 100%;
+            padding: .375rem .75rem;
+            font-size: 1rem;
+            font-weight: 400;
+            line-height: 1.5;
+            color: var(--bs-body-color);
+            -webkit-appearance: none;
+            -moz-appearance: none;
+            appearance: none;
+            background-color: var(--bs-body-bg);
+            background-clip: padding-box;
+            border: var(--bs-border-width) solid var(--bs-border-color);
+            border-radius: var(--bs-border-radius);
+            transition: border-color .15s ease-in-out, box-shadow .15s ease-in-out;
+        }
+
+        .mb-2 {
+            margin-bottom: .5rem !important;
+        }
+
+        @media (min-width: 768px) {
+            .col-md-6 {
+                flex: 0 0 auto;
+                width: 50%;
+            }
+        }
+
+        @media (min-width: 576px) {
+            .col-sm-8 {
+                flex: 0 0 auto;
+                width: 66.66666667%;
+            }
+        }
+
+        @media (max-width: 992px) {
+            .news-title h1 {
+                font-size: 3rem;
+                margin-bottom: 100px;
+            }
+
+            .news-title p {
+                display: none;
+            }
+
+            .main-title {
+                font-size: 35px;
+            }
+
+            .hero-section {
+                background-size: 360px;
+            }
+
+            .placementSection .placementIntro .placementSteps {
+                justify-content: center;
+            }
+
+            .testimonials-section {
+                flex-direction: column;
+            }
+
+            .testimonials-container {
+                grid-template-columns: auto !important;
+            }
+
+            .keep-responsive {
+                line-height: 2.5;
+            }
+
+            .span-responsive {
+                line-height: 1.5;
+                font-size: 16px;
+                margin: 2px;
+            }
+
+            .row {
+                margin-top: 25px;
+            }
+
+            .nav-links {
+                right: -60px;
+            }
+
+            #chatbot-modal {
+                width: 88%;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <header class="navbar">
+        <div class="navbar-container">
+            <a href="index.html" class="logo">
+                <img src="assets/images/icons/logo.png" alt="Aptech Logo">
+            </a>
+            <nav class="nav-links" id="navLinks">
+                <a href="index.html">Home</a>
+                <a href="about.html">About</a>
+                <a href="courses.html">Courses</a>
+                <a href="newsAndEvens.html">News & Events</a>
+                <a href="alumni.html">Alumni</a>
+                <a href="placement.html">Placement</a>
+                <a href="virtual-tour.html">Virtual Tour</a>
+            </nav>
+            <div class="hamburger-menu" id="hamburgerMenu">
+                <button class="menu "><span></span></button>
+            </div>
+            <button id="theme-toggle" class="theme-btn">
+                <img id="theme-icon" src="assets/images/icons/day.png" alt="Toggle Theme">
+            </button>
+        </div>
+    </header>
+    <section class="news-section">
+        <div class="news-title">
+            <h1>Aptech Verse Placement</h1>
+            <p>Experience the highlights of Aptech Verse</p>
+        </div>
+        <video autoplay muted loop playsinline>
+            <source src="assets/videos/Placement.mp4" type="video/mp4">
+            Your browser does not support HTML5 video.
+        </video>
+    </section>
+    <section class="placementSection bg-light" style="padding: 1rem;">
+        <div class="placementIntro">
+            <h1>Placement Assistance</h1>
+            <p>We have an active Placements Cell dedicated to fulfill market requirements with quality IT HR, we not
+                only conduct placements activities in collaboration with industry leaders but are also involved in
+                preparing our student to meet industry expectations.</p>
+            <div class="placementSteps">
+                <div class="placementStepsItems">
+                    <div class="imgBox"><img style="height: 260px;" src="assets/images/Placement/Workshop.png" alt="">
+                    </div>
+                    <p>Placement Workshops</p>
+                </div>
+                <div class="placementStepsItems">
+                    <div class="imgBox"><img style="height: 260px;" src="assets/images/Placement/Skills-Sessions.png"
+                            alt=""></div>
+                    <p>Interview Sessions</p>
+                </div>
+                <div class="placementStepsItems">
+                    <div class="imgBox"><img style="height: 260px;" src="assets/images/Placement/Interview-Sessions.png"
+                            alt=""></div>
+                    <p>Semester Projects</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="hero-section">
+        <div class="overlay">
+            <!-- <img src="assets/images/Placement/partners.jpg" alt=""> -->
+            <h2><span class="brand">Aptech Verse</span> <span class="highlight">Signature</span></h2>
+            <h1 class="main-title">Our Recruiters</h1>
+            <a href="assets/images/Placement/partners.jpg" download class="btn">See Partners</a>
+        </div>
+    </section>
+    <section class="top-placements">
+        <div class="container">
+            <h2 class="section-title"> <img src="https://aptech-education.com.pk/assets/images/pakistan-icon.png"
+                    style="filter: drop-shadow(2px 4px 6px black);" alt="">Top Placements <span>2024</span></h2>
+            <p class="section-subtitle">Celebrating our most successful students placed at top companies worldwide.
+            </p>
+
+            <div class="placement-grid">
+                <!-- Card 1 -->
+                <div class="placement-card">
+                    <div class="placement-header">
+                        <img class="student-photo"
+                            src="https://aptech-education.com.pk/assets/images/placement/Ashir.png" alt="Ali Raza">
+                    </div>
+                    <div class="placement-info">
+                        <h3>Aashir Irfan</h3>
+                        <span class="placement-role">Systems Limited</span>
+                        <p class="placement-company">Dot Net Developer</p>
+                    </div>
+                </div>
+
+                <!-- Card 2 -->
+                <div class="placement-card">
+                    <div class="placement-header">
+                        <img class="student-photo"
+                            src="https://aptech-education.com.pk/assets/images/placement/Asset_2.png"
+                            alt="Microsoft Placement">
+                    </div>
+                    <div class="placement-info">
+                        <h3>Adil Kamal</h3>
+                        <span class="placement-role">Invision custom solutions</span>
+                        <p class="placement-company">Senior Dot Net Developer & Team Lead</p>
+                    </div>
+                </div>
+
+                <!-- Card 3 -->
+                <div class="placement-card">
+                    <div class="placement-header">
+                        <img class="student-photo"
+                            src="https://aptech-education.com.pk/assets/images/placement/Asset_3.png"
+                            alt="Meta Placement">
+                    </div>
+                    <h3>Syed Shumail Mehdi</h3>
+                    <span class="placement-role">4S Advisory</span>
+                    <p class="placement-company">Salesforce consultant</p>
+                </div>
+                <div class="placement-card">
+                    <div class="placement-header">
+                        <img class="student-photo"
+                            src="https://aptech-education.com.pk/assets/images/placement/Muhammad_Asim.jpg"
+                            alt="Meta Placement">
+                    </div>
+                    <h3>Muhammad Asim</h3>
+                    <span class="placement-role">Code Four Client</span>
+                    <p class="placement-company">Full Stack Dot Net Developer</p>
+                </div>
+                <div class="placement-card">
+                    <div class="placement-header">
+                        <img class="student-photo"
+                            src="https://aptech-education.com.pk/assets/images/placement/Asset_4.png"
+                            alt="Meta Placement">
+                    </div>
+                    <h3>Syed Muhammad Kashif Faraz Ali</h3>
+                    <span class="placement-role">RA Group</span>
+                    <p class="placement-company">CTO & System Analyst</p>
+                </div>
+                <div class="placement-card">
+                    <div class="placement-header">
+                        <img class="student-photo"
+                            src="https://aptech-education.com.pk/assets/images/placement/Muhammad%20Ali%20Quddus%20(2).png"
+                            alt="Meta Placement">
+                    </div>
+                    <h3>Muhammad Ali Quddus</h3>
+                    <span class="placement-role">Abtach LTD</span>
+                    <p class="placement-company">React Native Developer</p>
+                </div>
+                <div class="placement-card">
+                    <div class="placement-header">
+                        <img class="student-photo"
+                            src="https://aptech-education.com.pk/assets/images/placement/Waleed%20ul%20Haque.jpg"
+                            alt="Meta Placement">
+                    </div>
+                    <h3>Waleed Ul Haque</h3>
+                    <span class="placement-role">Utopia Industries Pvt Ltd</span>
+                    <p class="placement-company">SQA and Project Coordinator</p>
+                </div>
+                <div class="placement-card">
+                    <div class="placement-header">
+                        <img class="student-photo"
+                            src="https://aptech-education.com.pk/assets/images/placement/Sheikh_Huzaifa_Ali.jpg"
+                            alt="Meta Placement">
+                    </div>
+                    <h3>Sheikh Huzaifa Ali</h3>
+                    <span class="placement-role">Softologics</span>
+                    <p class="placement-company">PHP Developer</p>
+                </div>
+                <div class="placement-card">
+                    <div class="placement-header">
+                        <img class="student-photo"
+                            src="https://aptech-education.com.pk/assets/images/placement/Zainuddin.jpg"
+                            alt="Meta Placement">
+                    </div>
+                    <h3>Zainuddin Mughal</h3>
+                    <span class="placement-role">TAQWA Apps</span>
+                    <p class="placement-company">Front-End Developer</p>
+                </div>
+                <div>
+                    <div class="placement-card">
+                        <div class="placement-header">
+                            <img class="student-photo"
+                                src="https://aptech-education.com.pk/assets/images/placement/Zohaib_khan.jpg"
+                                alt="Meta Placement">
+                        </div>
+                        <h3>Zohaib Khan</h3>
+                        <span class="placement-role">360 Tech Solution</span>
+                        <p class="placement-company">Senior PHP Developer</p>
+                    </div>
+
+                    <!-- Add more cards as needed -->
+                </div>
+            </div>
+    </section>
+    <!-- Testimonials Section -->
+    <section class="testimonials-section">
+        <h2 class="section-title">What Our Students Say</h2>
+        <div class="testimonials-container">
+
+            <!-- Testimonial 1 -->
+            <div class="testimonial-card">
+                <p class="testimonial-text">"Aptech Verse transformed my career. The instructors were amazing and the
+                    hands-on learning truly helped me grow."</p>
+                <div class="testimonial-profile">
+                    <img src="https://i.pravatar.cc/100?img=12" alt="Student photo">
+                    <div>
+                        <h3>Ahsan Raza</h3>
+                        <p>Full Stack Developer at HBL</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Testimonial 2 -->
+            <div class="testimonial-card">
+                <p class="testimonial-text">"The Tech Exhibition gave me a platform to shine. I showcased my project and
+                    got internship offers right after!"</p>
+                <div class="testimonial-profile">
+                    <img src="https://i.pravatar.cc/100?img=20" alt="Student photo">
+                    <div>
+                        <h3>Fatima Khan</h3>
+                        <p>Software Intern at Systems Ltd</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Testimonial 3 -->
+            <div class="testimonial-card">
+                <p class="testimonial-text">"From zero to developer — Aptech’s guidance was life-changing. I now
+                    confidently build real-world applications."</p>
+                <div class="testimonial-profile">
+                    <img src="https://i.pravatar.cc/100?img=36" alt="Student photo">
+                    <div>
+                        <h3>Zara Javed</h3>
+                        <p>Frontend Developer at Techlogix</p>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+    
+    <footer class="footer">
+        <div class="footer-content">
+            <div class="footer-logo shine">Aptech Verse</div>
+            <p class="footer-tagline">Where Future Learns</p>
+            <nav class="footer-nav">
+                <a href="index.html">Home</a>
+                <a href="about.html">About</a>
+                <a href="courses.html">Courses</a>
+                <a href="newsAndEvens.html">News & Events</a>
+                <a href="alumni.html">Alumni</a>
+                <a href="placement.html">Placement</a>
+                <a href="virtual-tour.html">Virtual Tour</a>
+            </nav>
+            <div class="footer-social">
+                <a href="#" class="social-icon">
+                    <img src="assets/images/icons/facebook.png" alt="Facebook">
+                </a>
+                <a href="https://www.youtube.com/@aptechlearningpakistan" class="social-icon">
+                    <img src="assets/images/icons/youtube.svg" alt="Youtube">
+                </a>
+                <a href="https://www.linkedin.com/school/aptech-computer-education-pakistan-operatons/mycompany/?viewAsMember=true"
+                    class="social-icon">
+                    <img src="assets/images/icons/linkdin.png" alt="LinkedIn">
+                </a>
+                <a href="https://wa.me/+923339560169" class="social-icon">
+                    <img src="assets/images/icons/whatsapp.png" alt="Whatsapp">
+                </a>
+            </div>
+            <p class="footer-copyright">&copy; 2025 Aptech Verse. All rights reserved.</p>
+        </div>
+    </footer>
+    <script>
+        // Navbar Mobile Menu Toggle
+        document.addEventListener("DOMContentLoaded", function () {
+            const hamburger = document.getElementById('hamburgerMenu');
+            const navLinks = document.getElementById('navLinks');
+
+            hamburger.addEventListener('click', () => {
+                navLinks.classList.toggle('active');
+            });
+        });
+
+        let menuToggle = document.querySelector('.menu');
+        menuToggle.onclick = function () {
+            menuToggle.classList.toggle('active')
+        }
+        // Paralex Effect in Toggle
+        const nav = document.getElementById('navLinks');
+
+        nav.addEventListener('mousemove', function (e) {
+            const x = (window.innerWidth - e.pageX * 2) / 100;
+            const y = (window.innerHeight - e.pageY * 2) / 100;
+            nav.style.transform = `translateX(0%) rotateY(${x}deg) rotateX(${y}deg)`;
+        });
+
+        nav.addEventListener('mouseleave', function () {
+            nav.style.transform = 'translateX(0%) rotateY(0deg) rotateX(0deg)';
+        });
+
+        const toggleBtn = document.getElementById("theme-toggle");
+        const themeIcon = document.getElementById("theme-icon");
+
+        toggleBtn.addEventListener("click", () => {
+            document.body.classList.toggle("dark-mode");
+
+            const isDark = document.body.classList.contains("dark-mode");
+            themeIcon.src = isDark ? "assets/images/icons/night.png" : "assets/images/icons/day.png";
+        });
+    </script>
+    <script src="js/chatbot.js"></script>
+</body>
+
+</html>

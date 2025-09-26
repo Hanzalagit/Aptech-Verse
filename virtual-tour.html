@@ -1,0 +1,311 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <title>Virtual Tour</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <!-- <link href="https://fonts.googleapis.com/css2?family=Inconsolata:wght@200..900&display=swap" rel="stylesheet"> -->
+  <link rel="stylesheet" href="css/virtual-tour.css">
+  <style>
+    body {
+      margin: 0;
+      overflow: hidden;
+    }
+
+    canvas {
+      display: block;
+    }
+
+    #play {
+      font-size: 1.5rem;
+    }
+
+    #instructions {
+      width: 270px;
+      position: absolute;
+      bottom: 30px;
+      right: 30px;
+      color: rgb(255, 255, 255);
+      font-size: 1.5rem;
+      background: transparent;
+      background-size: 200% 100%;
+      background-position: left center;
+      padding: 15px 20px;
+      border-radius: 2px;
+      border: 1px dashed #ffffff;
+      cursor: pointer;
+      transition: color 0.4s ease;
+      font-family: "Inconsolata", monospace;
+      line-height: 1.2;
+      overflow: hidden;
+      z-index: 1;
+    }
+
+    #instructions::before {
+      content: "";
+      position: absolute;
+      top: 0;
+      left: -100%;
+      width: 100%;
+      height: 100%;
+      background: linear-gradient(45deg, #000000, #d4d626);
+      transition: all 0.5s ease;
+      z-index: 0;
+    }
+
+    #instructions:hover::before {
+      left: 0;
+    }
+
+    #instructions span {
+      position: relative;
+      z-index: 1;
+    }
+
+    #instructions:hover {
+      background-position: right center;
+    }
+
+    #instructions.hidden {
+      display: none;
+    }
+
+    .triangle {
+      display: inline;
+      border-style: solid;
+      border-width: 4px 0 4px 7.7px;
+      border-color: transparent transparent transparent #ffffff;
+      animation: blinker 1s step-start infinite;
+      right: 229px;
+      position: absolute !important;
+      bottom: 79px;
+    }
+
+    span {
+      font-size: medium;
+    }
+
+    @keyframes blinker {
+      50% {
+        opacity: 0;
+      }
+    }
+  </style>
+</head>
+
+<body>
+  <header class="navbar">
+    <div class="navbar-container">
+      <a href="index.html" class="logo">
+        <img src="assets/images/icons/logo.png" alt="Aptech Logo">
+      </a>
+      <nav class="nav-links" id="navLinks">
+        <a href="index.html">Home</a>
+        <a href="about.html">About</a>
+        <a href="courses.html">Courses</a>
+        <a href="newsAndEvens.html">News & Events</a>
+        <a href="alumni.html">Alumni</a>
+        <a href="placement.html">Placement</a>
+        <a href="virtual-tour.html">Virtual Tour</a>
+      </nav>
+      <div class="hamburger-menu" id="hamburgerMenu">
+        <button class="menu "><span></span></button>
+      </div>
+    </div>
+  </header>
+  <div id="instructions"><span id="play">Play</span> <span class="triangle"></span> <br> <span>Click to start
+      walkthrough</span> <br> <span>use
+      <strong>W A S D</strong> to
+      move</span></div>
+
+  <script src="https://cdn.jsdelivr.net/npm/three@0.128.0/build/three.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/three@0.128.0/examples/js/loaders/GLTFLoader.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/three@0.128.0/examples/js/controls/PointerLockControls.js"></script>
+
+  <script>
+    const instructions = document.getElementById("instructions");
+    const raycaster = new THREE.Raycaster(
+      new THREE.Vector3(),
+      new THREE.Vector3(0, -1, 0),
+      0,
+      10
+    );
+    const objects = [];
+
+    instructions.addEventListener("click", () => {
+      controls.lock();
+      instructions.classList.add("hidden");
+    });
+
+    document.addEventListener("keydown", (event) => {
+      if (event.key === "Escape") {
+        controls.unlock();
+        instructions.classList.remove("hidden");
+      }
+    });
+
+    // Scene + Camera + Renderer
+    const scene = new THREE.Scene();
+    scene.background = new THREE.Color(0x222222);
+
+    const camera = new THREE.PerspectiveCamera(
+      85,
+      window.innerWidth / window.innerHeight,
+      0.1,
+      1000
+    );
+    camera.position.set(6, 9, 70);
+
+    const renderer = new THREE.WebGLRenderer({ antialias: true });
+    renderer.setSize(window.innerWidth, window.innerHeight);
+    renderer.shadowMap.enabled = true;
+    renderer.shadowMap.type = THREE.PCFSoftShadowMap;
+    document.body.appendChild(renderer.domElement);
+
+    // Lights
+    const ambientLight = new THREE.AmbientLight(0xffffff, 0.5);
+    scene.add(ambientLight);
+    const sunLight = new THREE.DirectionalLight(0xffffff, 2);
+    sunLight.position.set(10, 8, 50);
+    scene.add(sunLight);
+    // const sunLight1 = new THREE.DirectionalLight(0xffffff, 5);
+    // sunLight1.position.set(111.678, -150.965, -269.684);
+    // scene.add(sunLight1);
+    // const pointLight = new THREE.PointLight(0xffeecc, 1, 100);
+    // pointLight.position.set(0, 5, 0);
+    // scene.add(pointLight);
+
+    // Controls
+    const controls = new THREE.PointerLockControls(camera, document.body);
+    document.getElementById("instructions").addEventListener("click", () => {
+      controls.lock();
+    });
+
+    // Movement keys
+    const velocity = new THREE.Vector3();
+    const keys = {};
+    let canJump = false; // Player can jump only when on the ground/stairs
+    document.addEventListener("keydown", (e) => {
+      keys[e.code] = true;
+      if (e.code === "Space" && canJump) {
+        velocity.y = 25; // This value controls the jump height
+        canJump = false;
+      }
+    });
+    document.addEventListener("keyup", (e) => (keys[e.code] = false));
+
+    // Floor
+    const floorGeo = new THREE.PlaneGeometry(500, 500);
+    const floorMat = new THREE.MeshStandardMaterial({ color: 0x444444 });
+    const floor = new THREE.Mesh(floorGeo, floorMat);
+    floor.rotation.x = -Math.PI / 2;
+    floor.receiveShadow = true;
+    scene.add(floor);
+    objects.push(floor);
+
+    // Load Blender model
+    const loader = new THREE.GLTFLoader();
+    loader.load("final.glb", (gltf) => {
+      gltf.scene.traverse((child) => {
+        if (child.isMesh) {
+          child.castShadow = true;
+          child.receiveShadow = true;
+          child.material.side = THREE.DoubleSide;
+          objects.push(child); // Add all meshes to the list for collision
+        }
+      });
+      scene.add(gltf.scene);
+    });
+
+    // Animate
+    const clock = new THREE.Clock();
+    function animate() {
+      requestAnimationFrame(animate);
+
+      const delta = clock.getDelta();
+      velocity.x = 0;
+      velocity.z = 0;
+
+      const speed = 20;
+      const jumpSpeed = 50;
+      const gravity = 90;
+
+      // Apply gravity
+      velocity.y -= gravity * delta;
+
+      // Player movement
+      if (keys["KeyW"]) velocity.z += speed * delta;
+      if (keys["KeyS"]) velocity.z -= speed * delta;
+      if (keys["KeyA"]) velocity.x -= speed * delta;
+      if (keys["KeyD"]) velocity.x += speed * delta;
+
+      // Update camera position
+      controls.moveRight(velocity.x);
+      controls.moveForward(velocity.z);
+
+      // Raycasting for ground/stairs detection
+      raycaster.ray.origin.copy(controls.getObject().position);
+      raycaster.ray.origin.y -= 5; // A little above the feet
+
+      const intersections = raycaster.intersectObjects(objects);
+      const onObject = intersections.length > 0;
+
+      if (onObject) {
+        velocity.y = Math.max(0, velocity.y);
+        canJump = true;
+      }
+
+      controls.getObject().position.y += velocity.y * delta;
+
+      renderer.render(scene, camera);
+    }
+    animate();
+
+    window.addEventListener("resize", () => {
+      camera.aspect = window.innerWidth / window.innerHeight;
+      camera.updateProjectionMatrix();
+      renderer.setSize(window.innerWidth, window.innerHeight);
+    });
+
+    // Navbar Mobile Menu Toggle
+    document.addEventListener("DOMContentLoaded", function () {
+      const hamburger = document.getElementById("hamburgerMenu");
+      const navLinks = document.getElementById("navLinks");
+
+      hamburger.addEventListener("click", () => {
+        navLinks.classList.toggle("active");
+      });
+    });
+
+    let menuToggle = document.querySelector(".menu");
+    menuToggle.onclick = function () {
+      menuToggle.classList.toggle("active");
+    };
+    // Paralex Effect in Toggle
+    const nav = document.getElementById("navLinks");
+
+    nav.addEventListener("mousemove", function (e) {
+      const x = (window.innerWidth - e.pageX * 2) / 100;
+      const y = (window.innerHeight - e.pageY * 2) / 100;
+      nav.style.transform = `translateX(0%) rotateY(${x}deg) rotateX(${y}deg)`;
+    });
+
+    nav.addEventListener("mouseleave", function () {
+      nav.style.transform = "translateX(0%) rotateY(0deg) rotateX(0deg)";
+    });
+
+    const toggleBtn = document.getElementById("theme-toggle");
+    const themeIcon = document.getElementById("theme-icon");
+
+    toggleBtn.addEventListener("click", () => {
+      document.body.classList.toggle("dark-mode");
+
+      const isDark = document.body.classList.contains("dark-mode");
+      themeIcon.src = isDark ? "assets/images/icons/night.png" : "assets/images/icons/day.png";
+    });
+  </script>
+</body>
+
+</html>

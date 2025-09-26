@@ -1,0 +1,409 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Aptech Verse | Home</title>
+    <link rel="icon" type="image/png" href="https://aptech-education.com.pk/assets/images/favicon.png">
+    <link rel="stylesheet" href="css/styl.css">
+    <link rel="stylesheet" href="css/chatbot.css">
+    <!-- Swiper CSS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.css" />
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/rellax/1.12.1/rellax.min.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+    <script> window.chtlConfig = { chatbotId: "6587938189" } </script>
+    <script async data-id="6587938189" id="chtl-script" type="text/javascript"
+        src="https://chatling.ai/js/embed.js"></script>
+    <style>
+        body.dark-mode {
+           --bg-color: linear-gradient(360deg, rgb(0, 0, 0), rgb(255 183 0));
+           --text-color: #f2f2f2;
+           background-color: var(--bg-color);
+           color: var(--text-color);
+       }
+        .hero-section {
+            height: 100vh;
+            background-image: url('assets/images/banners/banner.jpg');
+            background-size: cover;
+            background-attachment: fixed;
+            background-position: center;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            color: white;
+            position: relative;
+        }
+
+        .hero-section::before {
+            content: "";
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0, 0, 0, 0.5);
+            /* Dark overlay */
+            z-index: 1;
+        }
+
+        .hero-content {
+            position: relative;
+            z-index: 2;
+            max-width: 800px;
+            padding: 0 20px;
+        }
+
+        .hero-content h1 {
+            font-size: 3rem;
+            margin-bottom: 20px;
+        }
+
+        .hero-content p {
+            font-size: 1.2rem;
+            margin-bottom: 30px;
+        }
+
+        .cta-button {
+            display: inline-block;
+            background-color: #FFD700;
+            color: #000;
+            padding: 12px 30px;
+            border-radius: 30px;
+            text-decoration: none;
+            font-weight: bold;
+            transition: background 0.3s ease;
+        }
+
+        .cta-button:hover {
+            background-color: #e6c200;
+        }
+
+        @media (max-width: 992px) {
+            .nav-links {
+                right: -50px;
+            }
+
+            #chatbot-modal {
+                width: 88%;
+            }
+        }
+
+        @media (max-width: 993px) {
+            .hero-text {
+                font-size: 2rem;
+            }
+        }
+    </style>
+
+</head>
+
+<body>
+    <header class="navbar">
+        <div class="navbar-container">
+            <a href="index.html" class="logo">
+                <img src="assets/images/icons/logo.png" alt="Aptech Logo">
+            </a>
+            <nav class="nav-links" id="navLinks">
+                <a href="index.html">Home</a>
+                <a href="about.html">About</a>
+                <a href="courses.html">Courses</a>
+                <a href="newsAndEvens.html">News & Events</a>
+                <a href="alumni.html">Alumni</a>
+                <a href="placement.html">Placement</a>
+                <a href="virtual-tour.html">Virtual Tour</a>
+            </nav>
+            <div class="hamburger-menu" id="hamburgerMenu">
+                <button class="menu "><span></span></button>
+            </div>
+            <button id="theme-toggle" class="theme-btn">
+                <img id="theme-icon" src="assets/images/icons/day.png" alt="Toggle Theme">
+            </button>
+        </div>
+    </header>
+
+    <section class="hero">
+        <!-- Spline Embed -->
+        <div class="spline">
+            <iframe src='https://my.spline.design/aibotrobotcharacterconcept-H4VQWwyI9YlLMgFpMiqdxMIV/' frameborder='0'
+                width='100%' height='100%'></iframe>
+        </div>
+
+        <div id="main-heading" class="hero-text shine">Aptech Verse</div>
+
+        <!-- Hero Text -->
+        <div class="hero-text">Where Future Learns</div>
+
+        <!-- Scroll Button -->
+        <!-- <button class="scroll-btn"
+            onclick="document.getElementById('next').scrollIntoView({behavior: 'smooth'});">Explore More ↓</button> -->
+    </section>
+
+    <!-- Next Section -->
+    <!-- Section Start -->
+    <section id="next" style="background-color: var(--bg-color); color: var(--text-color); padding: 60px 20px;">
+        <div style="max-width: 1200px; margin: auto; display: flex; flex-direction: column; gap: 80px;">
+
+            <!-- Row 1: ACN PRO -->
+            <div style="display: flex; flex-wrap: wrap; align-items: center; gap: 40px;">
+                <div style="flex: 1; min-width: 280px;">
+                    <h2 style="font-size: 2rem; margin-bottom: 10px;">ACN PRO</h2>
+                    <p style="line-height: 1.6;">
+                        Aptech Verse is a dynamic gateway to the future of tech education. Our mission is to build the
+                        next generation of developers, designers, and innovators across the globe.
+                    </p>
+                </div>
+                <div style="flex: 1; min-width: 280px;">
+                    <img src="assets/images/banners/banner1.jpg" alt="ACN PRO" class="rellax" data-rellax-speed="2"
+                        style="width: 100%; border-radius: 12px;">
+                </div>
+            </div>
+
+            <!-- Row 2: SMART PRO -->
+            <div style="display: flex; flex-wrap: wrap; align-items: center; gap: 40px; flex-direction: row-reverse;">
+                <div style="flex: 1; min-width: 280px;">
+                    <h2 style="font-size: 1.8rem; margin-bottom: 10px;">SMART PRO PROGRAMMING</h2>
+                    <p style="line-height: 1.6;">
+                        From Pakistan to the world — Aptech certifications are recognized globally, helping students
+                        unlock international opportunities.
+                    </p>
+                </div>
+                <div style="flex: 1; min-width: 280px;">
+                    <img src="assets/images/banners/banner2.png" alt="Smart Pro Programming" class="rellax"
+                        data-rellax-speed="-2" style="width: 100%; border-radius: 12px;">
+                </div>
+            </div>
+
+            <!-- Row 3: News + Swiper -->
+            <div style="display: flex; flex-wrap: wrap; align-items: center; gap: 40px;">
+                <div style="flex: 1; min-width: 280px;">
+                    <h2 style="font-size: 2.2rem; margin-bottom: 20px;">Our News</h2>
+                    <p style="line-height: 1.7;">
+                        Labs, smart classrooms, high-speed internet, and experienced trainers — our learning environment
+                        is future-ready.
+                    </p>
+                </div>
+                <div style="flex: 1; min-width: 280px;">
+                    <div class="swiper mySwipers" style="width: 100%; border-radius: 12px; overflow: hidden;">
+                        <div class="swiper-wrapper">
+                            <div class="swiper-slide">
+                                <img src="assets/images/banners/banner3.png" alt="Slide 1" style="width: 100%;">
+                            </div>
+                            <div class="swiper-slide">
+                                <img src="assets/images/banners/banner4.png" alt="Slide 2" style="width: 100%;">
+                            </div>
+                            <div class="swiper-slide">
+                                <img src="assets/images/banners/banner5.jpg" alt="Slide 3" style="width: 100%;">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+    <section class="hero-section">
+        <div class="hero-content">
+            <h1>Welcome to Aptech Verse</h1>
+            <p>Your Gateway to the Future of Tech Education</p>
+            <a href="about.html" class="cta-button">Explore More</a>
+        </div>
+    </section>
+
+    <section class="testimonials-section">
+        <div class="testimonial-grid-container">
+            <div class="testimonial-left-content">
+                <p class="testimonial-subheading">Testimonials</p>
+                <h2 class="testimonial-main-heading">Aptech creates <br> values across the <br> world.</h2>
+            </div>
+            <div class="testimonial-carousel-wrapper">
+                <div class="swiper testimonialSwiper">
+                    <div class="swiper-wrapper">
+                        <div class="swiper-slide">
+                            <div class="testimonial-card">
+                                <p class="testimonial-quote">
+                                    "Aptech Learning played a crucial role in my professional development. The
+                                    comprehensive training and expert guidance gave me the tools to launch my tech
+                                    venture with confidence. Aptech’s impact on my career is invaluable.""
+                                </p>
+                                <div class="testimonial-author">
+                                    <div class="author-details">
+                                        <h3 class="author-name">Farooq Rathod</h3>
+                                        <p class="author-title">Founder of Technology Yours</p>
+                                    </div>
+                                    <div class="author-image">
+                                        <img src="assets/images/testimonials/FAROOQ-RATHOD.png" alt="Farooq Rathod">
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="swiper-slide">
+                            <div class="testimonial-card">
+                                <p class="testimonial-quote">
+                                    "Aptech Learning was the catalyst for my career in technology. The innovative
+                                    courses and supportive environment fueled my passion and prepared me to lead in the
+                                    tech world. Aptech’s influence continues to inspire my work at The Tech Creators."
+                                </p>
+                                <div class="testimonial-author">
+                                    <div class="author-details">
+                                        <h3 class="author-name">Sidra Batool</h3>
+                                        <p class="author-title">The Tech Creators</p>
+                                    </div>
+                                    <div class="author-image">
+                                        <img src="assets/images/testimonials/Sidra-Batool.png" alt="Sidra Batool">
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="swiper-slide">
+                            <div class="testimonial-card">
+                                <p class="testimonial-quote">
+                                    "Aptech provided a supportive and innovative environment. The instructors were
+                                    experts in their fields, and the curriculum was always up-to-date with industry
+                                    trends, preparing us for real-world challenges."
+                                </p>
+                                <div class="testimonial-author">
+                                    <div class="author-details">
+                                        <h3 class="author-name">Abdul Haseeb Shaikh</h3>
+                                        <p class="author-title">CEO at Cloud Mesh Solutions Pvt. Ltd.</p>
+                                    </div>
+                                    <div class="author-image">
+                                        <img src="assets/images/testimonials/Abdul-Haseeb.jpeg" alt="Abdul Haseeb">
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="swiper-slide">
+                            <div class="testimonial-card">
+                                <p class="testimonial-quote">
+                                    "My journey at Aptech transformed me into a confident IT professional. The career
+                                    services helped me land my dream job, and the skills I learned are still relevant
+                                    years later."
+                                </p>
+                                <div class="testimonial-author">
+                                    <div class="author-details">
+                                        <h3 class="author-name">Ammar Akhter</h3>
+                                        <p class="author-title">CEO - Final Rentals</p>
+                                    </div>
+                                    <div class="author-image">
+                                        <img src="assets/images/testimonials/AMMAR-AKHTER.png" alt="AMMAR AKHTER">
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="swiper-slide">
+                            <div class="testimonial-card">
+                                <p class="testimonial-quote">
+                                    "The advanced courses at Aptech gave me the edge I needed in a competitive market.
+                                    The certifications are highly respected, opening doors to global opportunities.
+                                    Truly a world-class institution."
+                                </p>
+                                <div class="testimonial-author">
+                                    <div class="author-details">
+                                        <h3 class="author-name">Omar Admin</h3>
+                                        <p class="author-title">CEO - Empire Technologies</p>
+                                    </div>
+                                    <div class="author-image">
+                                        <img src="assets/images/testimonials/Omar-admin.png" alt="Omar Admin">
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="swiper-button-next testimonial-swiper-button-next"></div>
+                <div class="swiper-button-prev testimonial-swiper-button-prev"></div>
+            </div>
+        </div>
+    </section>
+    <section class="contact-section">
+        <div class="contact-container">
+            <div class="contact-left">
+                <h2 class="contact-heading">Get in Touch</h2>
+                <p class="contact-subheading">Ready to start your IT career? Contact us today!</p>
+
+                <div class="contact-info">
+                    <div class="info-item">
+                        <i class="fas fa-phone"></i>
+                        <p>+92 28 2821521</p>
+                    </div>
+                    <div class="info-item">
+                        <i class="fas fa-envelope"></i>
+                        <p>info@aptechverse.edu</p>
+                    </div>
+                    <div class="info-item">
+                        <i class="fas fa-clock"></i>
+                        <p>Mon - Sat: 9:00 AM - 9:00 PM</p>
+                    </div>
+                    <div class="info-item">
+                        <i class="fas fa-map-marker-alt"></i>
+                        <p>Aptech North Nazimabad Karachi Pakistan</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="contact-right">
+                <form class="contact-form">
+                    <div class="form-group">
+                        <label for="name">Your Name</label>
+                        <input type="text" id="name" name="name" placeholder="Enter your name" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="email">Your Email</label>
+                        <input type="email" id="email" name="email" placeholder="Enter your email" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="phone">Phone Number (Optional)</label>
+                        <input type="tel" id="phone" name="phone" placeholder="Your phone number">
+                    </div>
+                    <div class="form-group">
+                        <label for="message">Your Message</label>
+                        <textarea id="message" name="message" rows="5" placeholder="Tell us how we can help"
+                            required></textarea>
+                    </div>
+                    <button type="submit" class="submit-btn">Send Message</button>
+                </form>
+            </div>
+        </div>
+    </section>
+    <footer class="footer">
+        <div class="footer-content">
+            <div class="footer-logo shine">Aptech Verse</div>
+            <p class="footer-tagline">Where Future Learns</p>
+            <nav class="footer-nav">
+                <a href="index.html">Home</a>
+                <a href="about.html">About</a>
+                <a href="courses.html">Courses</a>
+                <a href="newsAndEvens.html">News & Events</a>
+                <a href="alumni.html">Alumni</a>
+                <a href="placement.html">Placement</a>
+                <a href="virtual-tour.html">Virtual Tour</a>
+            </nav>
+            <div class="footer-social">
+                <a href="https://www.facebook.com/APTECH.Pakistan" target="_blank" class="social-icon">
+                    <img src="assets/images/icons/facebook.png" alt="Facebook">
+                </a>
+                <a href="https://www.youtube.com/@aptechlearningpakistan"  target="_blank" class="social-icon">
+                    <img src="assets/images/icons/youtube.svg" alt="Youtube">
+                </a>
+                <a href="https://www.linkedin.com/school/aptech-computer-education-pakistan-operatons/mycompany/?viewAsMember=true"  target="_blank"
+                    class="social-icon">
+                    <img src="assets/images/icons/linkdin.png" alt="LinkedIn">
+                </a>
+                <a href="https://wa.me/+923339560169"  target="_blank" class="social-icon">
+                    <img src="assets/images/icons/whatsapp.png" alt="Whatsapp">
+                </a>
+            </div>
+            <p class="footer-copyright">&copy; 2025 Aptech Verse. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.js"></script>
+    <script src="js/main.js"></script>
+    <script src="js/chatbot.js"></script>
+
+</body>
+
+</html>

@@ -1,0 +1,1060 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Aptech Verse | Alumni</title>
+  <link rel="icon" type="image/png" href="https://aptech-education.com.pk/assets/images/favicon.png">
+  <link rel="stylesheet" href="css/styl.css" />
+  <link rel="stylesheet" href="css/chatbot.css" />
+  <script> window.chtlConfig = { chatbotId: "6587938189" } </script>
+    <script async data-id="6587938189" id="chtl-script" type="text/javascript"
+        src="https://chatling.ai/js/embed.js"></script>
+  <style>
+    header.navbar {
+      top: -1px;
+    }
+
+    @media (max-width: 992px) {
+      .nav-links {
+        right: -50px;
+      }
+
+      #chatbot-modal {
+        width: 88%;
+      }
+
+      .hero1 {}
+    }
+
+    .hero1 {
+      background: url('assets/images/News/news2.jpg') center/cover no-repeat;
+      height: 90vh;
+      min-height: 520px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+      position: relative;
+      overflow: hidden;
+      color: #fff;
+    }
+
+    .hero1::before {
+      content: "";
+      position: absolute;
+      inset: 0;
+      background: linear-gradient(to bottom, rgb(0 0 0 / 84%), rgba(0, 0, 0, 0.55));
+      z-index: 0;
+      pointer-events: none;
+    }
+
+    .hero-content {
+      position: relative;
+      z-index: 1;
+      padding: 0 20px;
+      max-width: 1100px;
+    }
+
+    .hero-content h1 {
+      font-family: "Inter", system-ui, -apple-system, "Segoe UI", Roboto, Arial, sans-serif;
+      font-weight: 700;
+      margin: 0 0 12px;
+      letter-spacing: 0.5px;
+      font-size: 2.75rem;
+      /* desktop */
+      line-height: 1.08;
+      color: #fff;
+      text-shadow: 0 2px 8px rgba(0, 0, 0, 0.25);
+      text-shadow: -3px 1px black;
+    }
+
+    .hero-content p {
+      margin: 0;
+      font-size: 1.15rem;
+      color: rgba(255, 255, 255, 0.92);
+      letter-spacing: 0.3px;
+      max-width: 700px;
+      margin-inline: auto;
+    }
+
+    .hero-decor {
+      display: inline-block;
+      width: 48px;
+      height: 4px;
+      background: #f2a100;
+      border-radius: 2px;
+      margin-top: 14px;
+      box-shadow: 0 0 0 6px rgba(242, 161, 0, 0.15);
+      opacity: 0.95;
+    }
+
+    @media (max-width: 1024px) {
+      .hero-content h1 {
+        font-size: 2.2rem;
+      }
+    }
+
+    @media (max-width: 768px) {
+      .hero1 {
+        height: auto;
+        min-height: 60vh;
+        padding: 60px 0;
+      }
+
+      .hero-content h1 {
+        font-size: 2rem;
+      }
+
+      .hero-content p {
+        font-size: 1.05rem;
+      }
+    }
+
+    .alumni {
+      color: #ffb400;
+    }
+
+    .btn-cta {
+      display: inline-block;
+      margin-top: 18px;
+      padding: 12px 22px;
+      border-radius: 999px;
+      background: #f2a100;
+      color: #111;
+      text-decoration: none;
+      font-weight: 600;
+      transition: transform 0.2s ease, box-shadow 0.2s ease;
+      box-shadow: 0 4px 14px rgba(242, 161, 0, 0.4);
+    }
+
+    .btn-cta:hover {
+      transform: translateY(-1px);
+      box-shadow: 0 6px 20px rgba(242, 161, 0, 0.5);
+    }
+
+    /* Alumni Form */
+    .alumni-form {
+      display: flex;
+      flex-direction: column;
+      max-width: 500px;
+      margin: 20px auto 0;
+    }
+
+    .alumni-form input,
+    .alumni-form textarea {
+      margin: 10px 0;
+      padding: 12px;
+      border: none;
+      border-radius: 5px;
+      font-size: 1rem;
+    }
+
+    .alumni-form button {
+      margin-top: 15px;
+      padding: 12px;
+      font-size: 1rem;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+      background: black;
+      color: white;
+      font-weight: bold;
+    }
+
+    .alumni-form button:hover {
+      background: #333;
+    }
+
+    @media (max-width: 993px) {
+      .alumni-grid {
+        grid-template-columns: 1fr;
+      }
+    }
+
+    .alumni-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+      gap: 20px;
+      padding: 20px 0;
+    }
+
+    .alumni-card {
+      perspective: 1000px;
+    }
+
+    .alumni-card-inner {
+      position: relative;
+      width: 100%;
+      height: 260px;
+      transition: transform 0.6s;
+      transform-style: preserve-3d;
+    }
+
+    .alumni-card:hover .alumni-card-inner {
+      transform: rotateY(180deg);
+    }
+
+    .alumni-card-front,
+    .alumni-card-back {
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      backface-visibility: hidden;
+      border-radius: 12px;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      padding: 15px;
+      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
+    }
+
+    .alumni-card-front {
+      background: #ffffff;
+      color: #000000;
+    }
+
+    .alumni-card-back {
+      background: #000000;
+      color: #fff;
+      transform: rotateY(180deg);
+    }
+
+    .alumni-icon {
+      font-size: 40px;
+      margin-bottom: 10px;
+    }
+
+    .alumni-section {
+      padding: 60px 20px;
+      background: #f9f9f9;
+      color: #1a1a1a;
+      text-align: center;
+    }
+
+    .alumni-section h2 {
+      font-size: 2.2rem;
+      color: #222;
+      margin-bottom: 40px;
+      font-weight: 700;
+    }
+
+    /* Grid */
+    .alumni-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
+      gap: 24px;
+      max-width: 1100px;
+      margin: 0 auto;
+      padding: 0 10px;
+    }
+
+    /* Card */
+    .alumni-card {
+      background: #fff;
+      border-radius: 14px;
+      padding: 24px 20px;
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+      transition: all 0.3s ease;
+      position: relative;
+      overflow: hidden;
+    }
+
+    /* Border animation */
+    .alumni-card::before {
+      content: "";
+      position: absolute;
+      top: 0;
+      left: -100%;
+      width: 100%;
+      height: 100%;
+      background: linear-gradient(120deg, #000000, #f2a100);
+      transition: all 0.4s ease;
+      z-index: 0;
+    }
+
+    .alumni-card:hover::before {
+      left: 0;
+    }
+
+    .alumni-card * {
+      z-index: 1;
+    }
+
+    /* Hover Effect */
+    .alumni-card:hover {
+      transform: translateY(-6px) scale(1.03);
+      box-shadow: 0 8px 18px rgba(0, 0, 0, 0.15);
+      color: #fff;
+    }
+
+    /* Icon */
+    .alumni-icon {
+      font-size: 2rem;
+      background: #000000;
+      color: #fff;
+      width: 60px;
+      height: 60px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      border-radius: 50%;
+      margin: 0 auto 14px;
+      transition: transform 0.3s;
+    }
+
+    .alumni-card:hover .alumni-icon {
+      transform: rotate(12deg) scale(1.1);
+      background: #fff;
+      color: #000000;
+    }
+
+    /* Text */
+    .alumni-card h3 {
+      font-size: 1.2rem;
+      font-weight: 700;
+      margin-bottom: 8px;
+    }
+
+    .alumni-card p {
+      font-size: 0.95rem;
+      color: #555;
+      line-height: 1.5;
+    }
+
+    /* Responsive Tweaks */
+    @media (max-width: 768px) {
+      .alumni-section h2 {
+        font-size: 1.8rem;
+      }
+
+      .alumni-card {
+        padding: 20px;
+      }
+    }
+
+    .alumni-section {
+      padding: 50px 20px;
+      text-align: center;
+      background-color: #222;
+    }
+
+    .alumni-section h2 {
+      color: #ffb700;
+    }
+
+    .alumni-grid {
+      display: grid;
+      gap: 20px;
+      max-width: 1000px;
+      margin: auto;
+    }
+
+    .alumni-card {
+      background: white;
+      padding: 25px 20px;
+      border-radius: 10px;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+      text-align: center;
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+
+    .alumni-card:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+    }
+
+
+    /* Carousel */
+    .carousel-section {
+      background: #222;
+      color: white;
+      padding: 60px 20px;
+      text-align: center;
+    }
+
+    .carousel {
+      max-width: 700px;
+      margin: auto;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .carousel-item {
+      display: none;
+      font-size: 1.2rem;
+    }
+
+    .carousel-item.active {
+      display: block;
+      animation: fade 1s ease-in-out;
+    }
+
+    @keyframes fade {
+      from {
+        opacity: 0;
+      }
+
+      to {
+        opacity: 1;
+      }
+    }
+
+    /* Timeline */
+    .timeline {
+      padding: 50px 20px;
+    }
+
+    .timeline h2 {
+      text-align: center;
+      margin-bottom: 30px;
+    }
+
+    .timeline-item {
+      margin: 20px 0;
+      border-left: 3px solid #f5b000;
+      padding-left: 15px;
+    }
+
+    .timeline-item span {
+      font-weight: bold;
+      color: #f5b000;
+    }
+
+    .cta-section {
+      position: relative;
+      color: #fff;
+      text-align: center;
+      padding: 60px 20px;
+      overflow: hidden;
+    }
+
+    .bg-video {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      z-index: -1;
+      filter: brightness(0.4);
+    }
+
+    .cta-content {
+      max-width: 600px;
+      margin: auto;
+      background: rgba(0, 0, 0, 0.6);
+      padding: 30px;
+      border-radius: 12px;
+    }
+
+    .alumni-form .form-group {
+      margin-bottom: 15px;
+      text-align: left;
+    }
+
+    .alumni-form input,
+    .alumni-form textarea {
+      width: 100%;
+      padding: 12px;
+      border-radius: 8px;
+      border: none;
+      outline: none;
+    }
+
+    .alumni-form button {
+      background: #ff6600;
+      color: #fff;
+      border: none;
+      padding: 12px 20px;
+      border-radius: 8px;
+      cursor: pointer;
+      font-weight: bold;
+      transition: 0.3s;
+    }
+
+    .alumni-form button:hover {
+      background: #ff3300;
+    }
+
+    .error {
+      color: #ff4444;
+      font-size: 13px;
+      display: block;
+      margin-top: 5px;
+    }
+
+    .cta-section {
+      background: #f5b000;
+      color: black;
+      text-align: center;
+      padding: 60px 20px;
+    }
+
+    .cta-section h2 {
+      margin-bottom: 20px;
+    }
+
+    .cta-section button {
+      padding: 10px 20px;
+      font-size: 1rem;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+      background: black;
+      color: white;
+    }
+
+    .cta-section button:hover {
+      background: #f5b000;
+    }
+
+    /* gallery */
+    .alumni-gallery {
+      padding: 40px 20px;
+      background: var(--bg-color);
+      text-align: center;
+      font-family: 'Segoe UI', sans-serif;
+    }
+
+    .gallery-title {
+      font-size: 28px;
+      margin-bottom: 20px;
+      color: var(--text-color);
+      font-weight: bold;
+    }
+
+    .gallery-filters {
+      margin-bottom: 25px;
+    }
+
+    .filter-btn {
+      background: none;
+      border: none;
+      font-size: 16px;
+      font-weight: 600;
+      margin: 0 10px;
+      padding: 8px 14px;
+      cursor: pointer;
+      color: #444;
+      transition: all 0.3s ease;
+    }
+
+    .filter-btn.active,
+    .filter-btn:hover {
+      color: #e6a500;
+      /* Theme color highlight */
+      border-bottom: 2px solid #e6a500;
+    }
+
+    .gallery-year {
+      display: none;
+    }
+
+    .gallery-year.active {
+      display: block;
+    }
+
+    .gallery-grid {
+
+      margin-bottom: 20px;
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      /* 3 columns */
+      gap: 20px;
+      /* space between cards */
+      max-width: 1000px;
+      margin: auto;
+    }
+
+    .gallery-item {
+      overflow: hidden;
+      border-radius: 10px;
+      box-shadow: 0 2px 6px rgba(0, 0, 0, 0.15);
+    }
+
+    .gallery-item img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      display: block;
+      transition: transform 0.3s ease;
+    }
+
+    .gallery-item img:hover {
+      transform: scale(1.05);
+    }
+
+    @media (max-width: 1024px) {
+      .gallery-grid {
+        grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+      }
+    }
+
+    @media (max-width: 768px) {
+      .gallery-grid {
+        grid-template-columns: repeat(2, 1fr);
+        /* tablet pe 2 columns */
+      }
+    }
+
+    @media (max-width: 480px) {
+      .gallery-grid {
+        grid-template-columns: 1fr;
+        /* mobile pe single column */
+      }
+    }
+  </style>
+</head>
+
+<body>
+  <header class="navbar">
+    <div class="navbar-container">
+      <a href="index.html" class="logo">
+        <img src="assets/images/icons/logo.png" alt="Aptech Logo">
+      </a>
+      <nav class="nav-links" id="navLinks">
+        <a href="index.html">Home</a>
+        <a href="about.html">About</a>
+        <a href="courses.html">Courses</a>
+        <a href="newsAndEvens.html">News & Events</a>
+        <a href="alumni.html">Alumni</a>
+        <a href="placement.html">Placement</a>
+        <a href="virtual-tour.html">Virtual Tour</a>
+      </nav>
+      <div class="hamburger-menu" id="hamburgerMenu">
+        <button class="menu "><span></span></button>
+      </div>
+      <button id="theme-toggle" class="theme-btn">
+        <img id="theme-icon" src="assets/images/icons/day.png" alt="Toggle Theme">
+      </button>
+    </div>
+  </header>
+
+  <!-- Hero Section -->
+  <section class="hero1" aria-label="Alumni Hero">
+    <div class="hero-content">
+      <h1>Our Proud <span class="alumni"> Alumni </span></h1>
+      <p>Celebrating the success stories of Aptech Graduates</p>
+      <div class="hero-decor" aria-hidden="true"></div>
+      <a href="#" id="cta-explore" class="btn-cta"
+        onclick="document.getElementById('next').scrollIntoView({behavior: 'smooth'});">Explore Alumni</a>
+      <div class="hero-decor" aria-hidden="true"></div>
+    </div>
+  </section>
+
+  <section id="next" class="alumni-section" aria-label="Featured Alumni">
+    <header class="alumni-header">
+      <h2>Featured Alumni</h2>
+      <p class="subtle">Celebrating Aptech graduates who are leading in their fields</p>
+    </header>
+
+    <div class="alumni-grid" aria-label="Alumni profiles grid">
+
+      <!-- Card 1 -->
+      <div class="alumni-card">
+        <div class="alumni-card-inner">
+          <!-- Front -->
+          <div class="alumni-card-front">
+            <h3>Aon Ali</h3>
+            <p>Country Lead Pakistan</p>
+          </div>
+          <!-- Back -->
+          <div class="alumni-card-back">
+            <div class="alumni-icon">👤</div>
+            <h3>Aon Ali</h3>
+            <p>Country Lead Pakistan<br>ASIA Market Salesforce</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- Card 2 -->
+      <div class="alumni-card">
+        <div class="alumni-card-inner">
+          <div class="alumni-card-front">
+            <h3>Qurat Baloch</h3>
+            <p>Software Engineer</p>
+          </div>
+          <div class="alumni-card-back">
+            <div class="alumni-icon">👤</div>
+            <h3>Qurat Baloch</h3>
+            <p>Software Engineer<br>Apple Inc</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- Card 3 -->
+      <div class="alumni-card">
+        <div class="alumni-card-inner">
+          <div class="alumni-card-front">
+            <h3>Rizwan Sheikh</h3>
+            <p>Project Head</p>
+          </div>
+          <div class="alumni-card-back">
+            <div class="alumni-icon">👤</div>
+            <h3>Rizwan Sheikh</h3>
+            <p>Project Head<br>Hamariweb.com</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- Card 4 -->
+      <div class="alumni-card">
+        <div class="alumni-card-inner">
+          <div class="alumni-card-front">
+            <h3>S. M. Kashif Faraz Ali</h3>
+            <p>CTO at RA Group</p>
+          </div>
+          <div class="alumni-card-back">
+            <div class="alumni-icon">👤</div>
+            <h3>S. M. Kashif Faraz Ali</h3>
+            <p>CTO at RA Group<br>& System Analyst Dawat E Islami</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- Card 5 -->
+      <div class="alumni-card">
+        <div class="alumni-card-inner">
+          <div class="alumni-card-front">
+            <h3>Syed Shumail Mehdi</h3>
+            <p>Solution Architect</p>
+          </div>
+          <div class="alumni-card-back">
+            <div class="alumni-icon">👤</div>
+            <h3>Syed Shumail Mehdi</h3>
+            <p>Solution Architect<br>4s Advisory</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- Card 6 -->
+      <div class="alumni-card">
+        <div class="alumni-card-inner">
+          <div class="alumni-card-front">
+            <h3>Adil Kamal</h3>
+            <p>Senior .NET Developer</p>
+          </div>
+          <div class="alumni-card-back">
+            <div class="alumni-icon">👤</div>
+            <h3>Adil Kamal</h3>
+            <p>Senior .NET Developer<br>Invision Custom Solutions</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+
+  <!-- Timeline -->
+  <section class="timeline">
+    <h2>Alumni Achievements</h2>
+    <div class="timeline-item"><span>2025:</span> Zahid Hussain Chihpa are accomplished graduates who have excelled in
+      their feilds, serving as inspirations for current students and testaments to the institution squality.</div>
+    <div class="timeline-item"><span>2024:</span> Faizan Raza is an standout graduate who has acheived prominence ,
+      motivating others with their success in diverse area like busness, science, and the arts.</div>
+    <div class="timeline-item"><span>2023:</span> Umer Fayyaz epitomize success, showcasing the yransformative power of
+      education through their exceptional acheivements and positive impact on society.</div>
+  </section>
+
+
+  <section class="cta-section">
+    <div class="cta-content">
+      <h2 class="shine">Join Our Alumni Network</h2>
+      <p style="color: white;">Stay connected, share your story, and inspire the next generation.</p>
+
+      <form class="alumni-form" id="alumniForm" novalidate>
+        <div class="form-group">
+          <input type="text" id="name" placeholder="Full Name *" required>
+          <span class="error" id="nameError"></span>
+        </div>
+
+        <div class="form-group">
+          <input type="email" id="email" placeholder="Email *" required>
+          <span class="error" id="emailError"></span>
+        </div>
+
+        <div class="form-group">
+          <input type="text" id="batch" placeholder="Batch Year (e.g. 2022)" required>
+          <span class="error" id="batchError"></span>
+        </div>
+
+        <div class="form-group">
+          <input type="text" id="role" placeholder="Current Role/Company" required>
+          <span class="error" id="roleError"></span>
+        </div>
+
+        <div class="form-group">
+          <textarea id="story" placeholder="Your Success Story" rows="4" required></textarea>
+          <span class="error" id="storyError"></span>
+        </div>
+
+        <button type="submit">Submit</button>
+      </form>
+    </div>
+  </section>
+
+  <section class="alumni-gallery">
+    <h2 class="gallery-title">Alumni Medalists</h2>
+
+    <div class="gallery-filters">
+      <button class="filter-btn active" data-year="2023">2022–2023</button>
+      <button class="filter-btn" data-year="2022">2021–2022</button>
+      <button class="filter-btn" data-year="2021">2020–2021</button>
+      <button class="filter-btn" data-year="2020">2019–2020</button>
+    </div>
+
+    <!-- Gallery Wrapper -->
+    <div class="gallery-wrapper">
+
+      <!-- Example Year 2023 -->
+      <div class="gallery-year active" data-year="2023">
+        <div class="gallery-grid">
+          <div class="gallery-item"><img
+              src="https://aptech-education.com.pk/assets/images/alumni/convo/convo2023-24/1.jpg" alt="Medalist"></div>
+          <div class="gallery-item"><img
+              src="https://aptech-education.com.pk/assets/images/alumni/convo/convo2023-24/2.jpg" alt="Medalist"></div>
+          <div class="gallery-item"><img
+              src="https://aptech-education.com.pk/assets/images/alumni/convo/convo2023-24/3.jpg" alt="Medalist"></div>
+          <div class="gallery-item"><img
+              src="https://aptech-education.com.pk/assets/images/alumni/convo/convo2023-24/4.jpg" alt="Medalist"></div>
+          <div class="gallery-item"><img
+              src="https://aptech-education.com.pk/assets/images/alumni/convo/convo2023-24/5.jpg" alt="Medalist"></div>
+          <div class="gallery-item"><img
+              src="https://aptech-education.com.pk/assets/images/alumni/convo/convo2023-24/6.jpg" alt="Medalist"></div>
+        </div>
+      </div>
+
+      <!-- Example Year 2022 -->
+      <div class="gallery-year" data-year="2022">
+        <div class="gallery-grid">
+          <div class="gallery-item"><img
+              src="https://aptech-education.com.pk/assets/images/alumni/convo/convo2022-23/1.jpg" alt="Medalist"></div>
+          <div class="gallery-item"><img
+              src="https://aptech-education.com.pk/assets/images/alumni/convo/convo2022-23/2.jpg" alt="Medalist"></div>
+          <div class="gallery-item"><img
+              src="https://aptech-education.com.pk/assets/images/alumni/convo/convo2022-23/3.jpg" alt="Medalist"></div>
+          <div class="gallery-item"><img
+              src="https://aptech-education.com.pk/assets/images/alumni/convo/convo2022-23/4.jpg" alt="Medalist"></div>
+          <div class="gallery-item"><img
+              src="https://aptech-education.com.pk/assets/images/alumni/convo/convo2022-23/5.jpg" alt="Medalist"></div>
+          <div class="gallery-item"><img
+              src="https://aptech-education.com.pk/assets/images/alumni/convo/convo2022-23/6.jpg" alt="Medalist"></div>
+        </div>
+      </div>
+
+      <!-- Example Year 2021 -->
+      <div class="gallery-year" data-year="2021">
+        <div class="gallery-grid">
+          <div class="gallery-item"><img
+              src="https://aptech-education.com.pk/assets/images/alumni/convo/convo2020-21/1.jpg" alt="Medalist"></div>
+          <div class="gallery-item"><img
+              src="https://aptech-education.com.pk/assets/images/alumni/convo/convo2020-21/3.jpg" alt="Medalist"></div>
+          <div class="gallery-item"><img
+              src="https://aptech-education.com.pk/assets/images/alumni/convo/convo2020-21/4.jpg" alt="Medalist"></div>
+          <div class="gallery-item"><img
+              src="https://aptech-education.com.pk/assets/images/alumni/convo/convo2020-21/5.jpg" alt="Medalist"></div>
+          <div class="gallery-item"><img
+              src="https://aptech-education.com.pk/assets/images/alumni/convo/convo2020-21/7.jpg" alt="Medalist"></div>
+          <div class="gallery-item"><img
+              src="https://aptech-education.com.pk/assets/images/alumni/convo/convo2020-21/2.jpg" alt="Medalist"></div>
+        </div>
+      </div>
+
+      <!-- Example Year 2020 -->
+      <div class="gallery-year" data-year="2020">
+        <div class="gallery-grid">
+          <div class="gallery-item"><img
+              src="https://aptech-education.com.pk/assets/images/alumni/convo/convo2019-20/1.jpg" alt="Medalist"></div>
+          <div class="gallery-item"><img
+              src="https://aptech-education.com.pk/assets/images/alumni/convo/convo2019-20/2.jpg" alt="Medalist"></div>
+          <div class="gallery-item"><img
+              src="https://aptech-education.com.pk/assets/images/alumni/convo/convo2019-20/3.jpg" alt="Medalist"></div>
+          <div class="gallery-item"><img
+              src="https://aptech-education.com.pk/assets/images/alumni/convo/convo2019-20/5.jpg" alt="Medalist"></div>
+          <div class="gallery-item"><img
+              src="https://aptech-education.com.pk/assets/images/alumni/convo/convo2019-20/4.jpg" alt="Medalist"></div>
+          <div class="gallery-item"><img
+              src="https://aptech-education.com.pk/assets/images/alumni/convo/convo2019-20/6.jpg" alt="Medalist"></div>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+
+  <footer class="footer">
+    <div class="footer-content">
+      <div class="footer-logo shine">Aptech Verse</div>
+      <p class="footer-tagline">Where Future Learns</p>
+      <nav class="footer-nav">
+        <a href="index.html">Home</a>
+        <a href="about.html">About</a>
+        <a href="courses.html">Courses</a>
+        <a href="newsAndEvens.html">News & Events</a>
+        <a href="alumni.html">Alumni</a>
+        <a href="placement.html">Placement</a>
+        <a href="virtual-tour.html">Virtual Tour</a>
+      </nav>
+      <div class="footer-social">
+        <a href="#" class="social-icon">
+          <img src="assets/images/icons/facebook.png" alt="Facebook">
+        </a>
+        <a href="https://www.youtube.com/@aptechlearningpakistan" class="social-icon">
+          <img src="assets/images/icons/youtube.svg" alt="Youtube">
+        </a>
+        <a href="https://www.linkedin.com/school/aptech-computer-education-pakistan-operatons/mycompany/?viewAsMember=true"
+          class="social-icon">
+          <img src="assets/images/icons/linkdin.png" alt="LinkedIn">
+        </a>
+        <a href="https://wa.me/+923339560169" class="social-icon">
+          <img src="assets/images/icons/whatsapp.png" alt="Whatsapp">
+        </a>
+      </div>
+      <p class="footer-copyright">&copy; 2025 Aptech Verse. All rights reserved.</p>
+    </div>
+  </footer>
+  <!-- JavaScript -->
+
+  <script src="js/chatbot.js"></script>
+  <script>
+    // Navbar Mobile Menu Toggle
+    document.addEventListener("DOMContentLoaded", function () {
+      const hamburger = document.getElementById('hamburgerMenu');
+      const navLinks = document.getElementById('navLinks');
+
+      hamburger.addEventListener('click', () => {
+        navLinks.classList.toggle('active');
+      });
+    });
+
+    let menuToggle = document.querySelector('.menu');
+    menuToggle.onclick = function () {
+      menuToggle.classList.toggle('active')
+    }
+    // Paralex Effect in Toggle
+    const nav = document.getElementById('navLinks');
+
+    nav.addEventListener('mousemove', function (e) {
+      const x = (window.innerWidth - e.pageX * 2) / 100;
+      const y = (window.innerHeight - e.pageY * 2) / 100;
+      nav.style.transform = `translateX(0%) rotateY(${x}deg) rotateX(${y}deg)`;
+    });
+
+    nav.addEventListener('mouseleave', function () {
+      nav.style.transform = 'translateX(0%) rotateY(0deg) rotateX(0deg)';
+    });
+
+    const toggleBtn = document.getElementById("theme-toggle");
+    const themeIcon = document.getElementById("theme-icon");
+
+    toggleBtn.addEventListener("click", () => {
+      document.body.classList.toggle("dark-mode");
+
+      const isDark = document.body.classList.contains("dark-mode");
+      themeIcon.src = isDark ? "assets/images/icons/night.png" : "assets/images/icons/day.png";
+    });
+
+    // Year filter
+    const filterBtns = document.querySelectorAll(".filter-btn");
+    const galleryYears = document.querySelectorAll(".gallery-year");
+
+    filterBtns.forEach(btn => {
+      btn.addEventListener("click", () => {
+        filterBtns.forEach(b => b.classList.remove("active"));
+        btn.classList.add("active");
+
+        let year = btn.dataset.year;
+        galleryYears.forEach(section => {
+          section.classList.remove("active");
+          if (section.dataset.year === year) {
+            section.classList.add("active");
+          }
+        });
+      });
+    });
+
+    // View More functionality
+    document.querySelectorAll(".view-more").forEach(button => {
+      button.addEventListener("click", () => {
+        let moreImages = button.nextElementSibling;
+        moreImages.classList.toggle("active");
+
+        if (moreImages.classList.contains("active")) {
+          button.textContent = "View Less";
+        } else {
+          button.textContent = "View More";
+        }
+      });
+    });
+
+    document.getElementById("alumniForm").addEventListener("submit", function (e) {
+      e.preventDefault();
+      let isValid = true;
+
+      // Name
+      const name = document.getElementById("name").value.trim();
+      if (name.length < 3) {
+        document.getElementById("nameError").textContent = "Name must be at least 3 characters.";
+        isValid = false;
+      } else {
+        document.getElementById("nameError").textContent = "";
+      }
+
+      // Email
+      const email = document.getElementById("email").value.trim();
+      const emailRegex = /^[^ ]+@[^ ]+\.[a-z]{2,3}$/;
+      if (!emailRegex.test(email)) {
+        document.getElementById("emailError").textContent = "Enter a valid email address.";
+        isValid = false;
+      } else {
+        document.getElementById("emailError").textContent = "";
+      }
+
+      // Batch Year
+      const batch = document.getElementById("batch").value.trim();
+      const yearRegex = /^(19|20)\d{2}$/;
+      if (!yearRegex.test(batch)) {
+        document.getElementById("batchError").textContent = "Enter a valid year (e.g., 2022).";
+        isValid = false;
+      } else {
+        document.getElementById("batchError").textContent = "";
+      }
+
+      // Role/Company
+      const role = document.getElementById("role").value.trim();
+      if (role.length < 2) {
+        document.getElementById("roleError").textContent = "Please enter your current role/company.";
+        isValid = false;
+      } else {
+        document.getElementById("roleError").textContent = "";
+      }
+
+      // Story
+      const story = document.getElementById("story").value.trim();
+      if (story.length < 10) {
+        document.getElementById("storyError").textContent = "Please share at least 10 characters.";
+        isValid = false;
+      } else {
+        document.getElementById("storyError").textContent = "";
+      }
+
+      if (isValid) {
+        alert("🎉 Form submitted successfully!");
+        this.reset();
+      }
+    });
+
+    // Live validation on blur
+    document.querySelectorAll("#alumniForm input, #alumniForm textarea").forEach(input => {
+      input.addEventListener("blur", () => {
+        document.getElementById("alumniForm").dispatchEvent(new Event("submit", { cancelable: true, bubbles: true }));
+      });
+    });
+
+  </script>
+</body>
+
+</html>

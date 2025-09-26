@@ -1,0 +1,356 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Aptech Verse | News & Events</title>
+    <link rel="icon" type="image/png" href="https://aptech-education.com.pk/assets/images/favicon.png">
+    <link rel="stylesheet" href="css/styl.css">
+    <link rel="stylesheet" href="css/chatbot.css">
+    <script> window.chtlConfig = { chatbotId: "6587938189" } </script>
+    <script async data-id="6587938189" id="chtl-script" type="text/javascript"
+        src="https://chatling.ai/js/embed.js"></script>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            background-color: #f4f4f4;
+        }
+
+        @media (max-width: 992px) {
+            .nav-links {
+                width: 100vw;
+            }
+
+            .news-title {
+                height: 275px;
+            }
+
+            .news-title h1 {
+                font-size: 2.5rem;
+            }
+
+            .news-title p {
+                line-height: 2;
+            }
+
+            .filter-buttons {
+                margin: 15px 18px;
+                line-height: 5;
+            }
+
+            #chatbot-modal {
+                width: 88%;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <header class="navbar">
+        <div class="navbar-container">
+            <a href="index.html" class="logo">
+                <img src="assets/images/icons/logo.png" alt="Aptech Logo">
+            </a>
+            <nav class="nav-links" id="navLinks">
+                <a href="index.html">Home</a>
+                <a href="about.html">About</a>
+                <a href="courses.html">Courses</a>
+                <a href="newsAndEvens.html">News & Events</a>
+                <a href="alumni.html">Alumni</a>
+                <a href="placement.html">Placement</a>
+                <a href="virtual-tour.html">Virtual Tour</a>
+            </nav>
+            <div class="hamburger-menu" id="hamburgerMenu">
+                <button style="left: 37px;" class="menu "><span></span></button>
+            </div>
+            <button id="theme-toggle" class="theme-btn">
+                <img id="theme-icon" src="assets/images/icons/day.png" alt="Toggle Theme">
+            </button>
+        </div>
+    </header>
+
+    <div style="text-align: center;" class="news-title">
+        <h1 class="shine">News & Events</h1>
+        <p>Experience the highlights of Aptech Verse</p>
+    </div>
+
+    <section class="news-section">
+        <video autoplay muted loop playsinline>
+            <source src="assets/videos/events-video.mp4" type="video/mp4">
+            Your browser does not support HTML5 video.
+        </video>
+    </section>
+
+    <div class="filter-buttons">
+        <button class="active" data-filter="all">All</button>
+        <button data-filter="event">Events</button>
+        <button data-filter="achievement">Achievements</button>
+        <button data-filter="media">Media</button>
+    </div>
+
+    <div class="news-grid">
+        <!-- Card 1 -->
+        <div class="news-card" data-category="event">
+            <img src="https://webbackend.aptech-education.com.pk/Files\Event\Event7821_04172024173716.jpg"
+                alt="News Image" />
+            <div class="news-card-content">
+                <h3>Mega Tech Exhibition 2023</h3>
+                <p>Join us for a full day of innovation, learning, and networking at Aptech’s biggest event yet.</p>
+                <div class="news-card-footer read-more-btn" data-title="Mega Tech Exhibition 2023"
+                    data-content="Aptech Pakistan proudly hosted the Mega Tech Exhibition 2023 — a full-day event celebrating innovation, creativity, and future-ready technology. Students showcased cutting-edge projects, startups presented solutions, and tech enthusiasts connected with industry leaders. It was a dynamic platform for learning, networking, and inspiring the next generation of tech talent."
+                    data-img="https://webbackend.aptech-education.com.pk/Files\Event\Event7821_04172024173716.jpg">Read
+                    more →
+                </div>
+            </div>
+        </div>
+
+        <!-- Card 2 -->
+        <div class="news-card" data-category="event">
+            <img src="assets/images/News/news2.jpg" alt="News Image" />
+            <div class="news-card-content">
+                <h3>Convocation Ceremony 2024</h3>
+                <p>A proud moment for all graduates as Aptech celebrates their achievements in style.</p>
+                <div class="news-card-footer read-more-btn" data-title="Convocation Ceremony 2024"
+                    data-content="A proud and memorable day for our graduates as Aptech Pakistan hosted the grand Convocation Ceremony 2024. Families, faculty, and students came together to celebrate years of hard work, dedication, and academic excellence. The event honored achievements, inspired futures, and marked the beginning of a new journey for our accomplished students."
+                    data-img="assets/images/News/news2.jpg">Read
+                    more →
+                </div>
+            </div>
+        </div>
+
+        <!-- Card 3 -->
+        <div class="news-card" data-category="achievement">
+            <img src="assets/images/News/news3.jpg" alt="News Image" />
+            <div class="news-card-content">
+                <h3>MOU Signing with HBL</h3>
+                <p>A strategic partnership to empower students through innovation and financial inclusion.</p>
+                <div class="news-card-footer read-more-btn" data-title="MOU Signing with HBL"
+                    data-content="Aptech Pakistan and Habib Bank Limited (HBL) have joined hands through a strategic Memorandum of Understanding (MOU) to enhance career development and financial literacy among students. This partnership aims to empower learners with modern banking knowledge and open new opportunities for growth, training, and future collaborations."
+                    data-img="assets/images/News/news3.jpg">Read
+                    more →
+                </div>
+            </div>
+        </div>
+        <!-- Card 3 -->
+        <div class="news-card" data-category="achievement">
+            <img src="assets/images/News/news4.jpg" alt="News Image" />
+            <div class="news-card-content">
+                <h3>Celebrating the Leading I.T. Education</h3>
+                <p>Celebrating leading IT education involves as well as the innovative use of technology in education.
+                </p>
+                <div class="news-card-footer read-more-btn" data-title="Celebrating the Leading I.T. Education"
+                    data-content="Aptech continues to set benchmarks in the field of I.T. education, empowering students with globally recognized skills and hands-on experience. This celebration marks our dedication to innovation, excellence, and producing future-ready tech professionals who are shaping the digital world."
+                    data-img="assets/images/News/news4.jpg">Read
+                    more →
+                </div>
+            </div>
+        </div>
+        <!-- Card 3 -->
+        <div class="news-card" data-category="media">
+            <img src="assets/images/News/news5.png" alt="News Image" />
+            <div class="news-card-content">
+                <h3>Mr. Iqbal Yousuf Shaikh's Interview on Venus TV</h3>
+                <p>Mr. Iqbal Yousuf Shaikh, CEO & Master Franchisee of Aptech industry-driven training.</p>
+                <div class="news-card-footer read-more-btn" data-title="Mr. Iqbal Yousuf Shaikh's Interview on Venus TV"
+                    data-content="In an inspiring appearance on Venus TV, Mr. Iqbal Yousuf Shaikh, a visionary leader of Aptech, shared his remarkable journey, insights into IT education, and the future of digital skills development in Pakistan. His words reflect decades of experience, passion for innovation, and commitment to empowering the youth through quality training and global exposure."
+                    data-img="assets/images/News/news5.png">Read
+                    more →
+                </div>
+            </div>
+        </div>
+        <!-- Card 3 -->
+        <div class="news-card" data-category="event">
+            <img src="https://webbackend.aptech-education.com.pk/Files\Event\Event3038_10232024153950.jpg"
+                alt="News Image" />
+            <div class="news-card-content">
+                <h3>Aptech Vision 2025</h3>
+                <p>Aptech Vision is the embodiment of our vision for our students highly employable market-ready
+                    professionals.
+                </p>
+                <div class="news-card-footer read-more-btn" data-title="Aptech Vision 2025"
+                    data-content="Aptech Vision is the embodiment of our vision for our students, which is to turn them into highly employable market-ready professionals. Acting as both a showcase and a marketplace for Human Resource & software solutions, this event is a testament to the efforts of students and their centers. This event now in its 8th iteration can be counted as one of the biggest software exhibition in Pakistan and is visited by university students, professionals, and other industry leaders. Last year over 210 projects were showcased, but it speaks volume when you consider that they were shortlisted from 1000+ projects created by Aptech students."
+                    data-img="https://webbackend.aptech-education.com.pk/Files\Event\Event3038_10232024153950.jpg">Read
+                    more →
+                </div>
+            </div>
+        </div>
+        <!-- Card 3 -->
+        <div class="news-card" data-category="media">
+            <img src="https://webbackend.aptech-education.com.pk/Files\Event\Event7084_07172025074712.jpg"
+                alt="News Image" />
+            <div class="news-card-content">
+                <h3>Aptech Bus Branding</h3>
+                <p>Artavia Advertising launched APTECH Learning's promoting PBS Red Bus campaign across 8 major Karachi
+                    routes.</p>
+                <div class="news-card-footer read-more-btn" data-title="Aptech Bus Branding"
+                    data-content="Artavia Advertising launched APTECH Learning's PBS Red Bus campaign across 8 major Karachi routes, promoting AI careers & diplomas from June to July 2025. The Aptech Bus Branding campaign brings our educational message to the streets. With vibrant visuals and powerful messaging, these buses promote Aptech’s commitment to innovation and learning across the city."
+                    data-img="https://webbackend.aptech-education.com.pk/Files\Event\Event7084_07172025074712.jpg">Read
+                    more →
+                </div>
+            </div>
+        </div>
+        <div class="news-card" data-category="achievement">
+            <img src="https://webbackend.aptech-education.com.pk/Files\Event\Event3619_07172025075000.jpg"
+                alt="News Image" />
+            <div class="news-card-content">
+                <h3>Lifetime Achievement Award</h3>
+                <p>Iqbal Yousuf Shaikh has been awarded the Lifetime Achievement Award by Aptech Global.</p>
+                <div class="news-card-footer read-more-btn" data-title="Lifetime Achievement Award"
+                    data-content="Aptech proudly honors one of its most distinguished alumni with the prestigious Lifetime Achievement Award This award celebrates an exceptional journey of dedication, innovation, and consistent excellence in the tech industry. With years of impactful contribution, the recipient has not only upheld the Aptech legacy but has also inspired countless learners globally. Iqbal Yousuf Shaikh has been awarded the Lifetime Achievement Award by Aptech Global."
+                    data-img="https://webbackend.aptech-education.com.pk/Files\Event\Event3619_07172025075000.jpg">Read
+                    more →
+                </div>
+            </div>
+        </div>
+
+        <!-- Add more cards as needed -->
+    </div>
+    <footer class="footer">
+        <div class="footer-content">
+            <div class="footer-logo shine">Aptech Verse</div>
+            <p class="footer-tagline">Where Future Learns</p>
+            <nav class="footer-nav">
+                <a href="index.html">Home</a>
+                <a href="about.html">About</a>
+                <a href="courses.html">Courses</a>
+                <a href="newsAndEvens.html">News & Events</a>
+                <a href="alumni.html">Alumni</a>
+                <a href="placement.html">Placement</a>
+                <a href="virtual-tour.html">Virtual Tour</a>
+            </nav>
+            <div class="footer-social">
+                <a href="#" class="social-icon">
+                    <img src="assets/images/icons/facebook.png" alt="Facebook">
+                </a>
+                <a href="https://www.youtube.com/@aptechlearningpakistan" class="social-icon">
+                    <img src="assets/images/icons/youtube.svg" alt="Youtube">
+                </a>
+                <a href="https://www.linkedin.com/school/aptech-computer-education-pakistan-operatons/mycompany/?viewAsMember=true"
+                    class="social-icon">
+                    <img src="assets/images/icons/linkdin.png" alt="LinkedIn">
+                </a>
+                <a href="https://wa.me/+923339560169" class="social-icon">
+                    <img src="assets/images/icons/whatsapp.png" alt="Whatsapp">
+                </a>
+            </div>
+            <p class="footer-copyright">&copy; 2025 Aptech Verse. All rights reserved.</p>
+        </div>
+    </footer>
+    <div id="newsModal" class="news-modal">
+        <div class="news-modal-content">
+            <span class="news-modal-close">&times;</span>
+            <img id="modal-img" src="" alt="News Image" />
+            <h3 id="modal-title">Title</h3>
+            <p style="margin: 20px;" id="modal-text">Full content here...</p>
+            <a href="assets/docs/AptechBusBranding.docx" download class="download-btn">
+                <i class="bi bi-download"></i> Download Details
+            </a>
+        </div>
+    </div>
+
+    <script>
+        const filterButtons = document.querySelectorAll('.filter-buttons button');
+        const newsCards = document.querySelectorAll('.news-card');
+
+        filterButtons.forEach(button => {
+            button.addEventListener('click', () => {
+                // Remove active class from all buttons
+                filterButtons.forEach(btn => btn.classList.remove('active'));
+                // Add active to clicked button
+                button.classList.add('active');
+
+                const filterValue = button.getAttribute('data-filter');
+
+                newsCards.forEach(card => {
+                    const category = card.getAttribute('data-category');
+
+                    if (filterValue === 'all' || filterValue === category) {
+                        card.style.display = 'block';
+                    } else {
+                        card.style.display = 'none';
+                    }
+                });
+            });
+        });
+
+        document.addEventListener("DOMContentLoaded", function () {
+            const hamburger = document.getElementById("hamburgerMenu");
+            const navLinks = document.getElementById("navLinks");
+
+            hamburger.addEventListener("click", () => {
+                navLinks.classList.toggle("active");
+            });
+        });
+
+        let menuToggle = document.querySelector(".menu");
+        menuToggle.onclick = function () {
+            menuToggle.classList.toggle("active");
+        };
+        // Paralex Effect in Toggle
+        const nav = document.getElementById("navLinks");
+
+        nav.addEventListener("mousemove", function (e) {
+            const x = (window.innerWidth - e.pageX * 2) / 100;
+            const y = (window.innerHeight - e.pageY * 2) / 100;
+            nav.style.transform = `translateX(0%) rotateY(${x}deg) rotateX(${y}deg)`;
+        });
+
+        nav.addEventListener("mouseleave", function () {
+            nav.style.transform = "translateX(0%) rotateY(0deg) rotateX(0deg)";
+        });
+        const newsmodal = document.getElementById("newsModal");
+        const modalImg = document.getElementById("modal-img");
+        const modalTitle = document.getElementById("modal-title");
+        const modalText = document.getElementById("modal-text");
+        const closeModal = document.querySelector(".news-modal-close");
+
+        document.querySelectorAll(".read-more-btn").forEach(button => {
+            button.addEventListener("click", () => {
+                modalImg.src = button.getAttribute("data-img");
+                modalTitle.textContent = button.getAttribute("data-title");
+                modalText.textContent = button.getAttribute("data-content");
+                newsmodal.style.display = "block";
+            });
+        });
+
+        closeModal.onclick = () => {
+            modal.style.display = "none";
+        };
+
+        window.onclick = (event) => {
+            if (event.target === modal) {
+                modal.style.display = "none";
+            }
+        };
+        document.querySelector(".news-modal-close").addEventListener("click", function () {
+            document.getElementById("newsModal").style.display = "none";
+        });
+
+        // Optional: Close modal when user clicks outside the modal content
+        window.addEventListener("click", function (event) {
+            var modal = document.getElementById("newsModal");
+            if (event.target === modal) {
+                modal.style.display = "none";
+            }
+        });
+        const toggleBtn = document.getElementById("theme-toggle");
+        const themeIcon = document.getElementById("theme-icon");
+
+        toggleBtn.addEventListener("click", () => {
+            document.body.classList.toggle("dark-mode");
+
+            const isDark = document.body.classList.contains("dark-mode");
+            themeIcon.src = isDark ? "assets/images/icons/night.png" : "assets/images/icons/day.png";
+        });
+    </script>
+    <script src="js/chatbot.js"></script>
+
+</body>
+
+</html>
