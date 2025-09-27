@@ -207,7 +207,7 @@
 
     // Load Blender model
     const loader = new THREE.GLTFLoader();
-    loader.load("final.glb", (gltf) => {
+    loader.load('https://drive.google.com/uc?export=download&id=1fuQwO1CwX-RVHoO6g_VlOnAbty7PgnZj', (gltf) => {
       gltf.scene.traverse((child) => {
         if (child.isMesh) {
           child.castShadow = true;
