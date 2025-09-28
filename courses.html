@@ -402,10 +402,40 @@
       <!-- Admission Form -->
       <form id="admissionForm" class="modal-form admission-form" onsubmit="return handleSubmit(event, 'admission')">
 
-        <div class="form-group"><label>First Name*</label><input type="text" required></div>
-        <div class="form-group"><label>Last Name*</label><input type="text" required></div>
-        <div class="form-group"><label>Email*</label><input type="email" required></div>
-        <div class="form-group"><label>Phone Number*</label><input type="tel" pattern="[0-9]{10,15}" required></div>
+        <div class="form-group">
+  <label>First Name*</label>
+  <input type="text" 
+         name="firstName" 
+         required 
+         pattern="[A-Za-z]{2,20}" 
+         title="Only letters allowed (2–20 characters)">
+</div>
+
+<div class="form-group">
+  <label>Last Name*</label>
+  <input type="text" 
+         name="lastName" 
+         required 
+         pattern="[A-Za-z]{2,20}" 
+         title="Only letters allowed (2–20 characters)">
+</div>
+
+<div class="form-group">
+  <label>Email*</label>
+  <input type="email" 
+         name="email" 
+         required 
+         title="Enter a valid email (example@mail.com)">
+</div>
+
+<div class="form-group">
+  <label>Phone Number*</label>
+  <input type="tel" 
+         name="phone" 
+         required 
+         pattern="[0-9]{11}" 
+         title="Phone number must be exactly 11 digits">
+</div>
         <div class="form-group"><label>Highest Education*</label><input type="text" required></div>
         <div class="form-group">
           <label>Program to Enroll*</label>
@@ -415,6 +445,12 @@
             <option>HDSE II</option>
             <option>ADSE I</option>
             <option>ADSE II</option>
+            <option>Office Automation</option>
+            <option>Web Development</option>
+            <option>Web App Developer with PHP and MySQL</option>
+            <option>Python Programming and Automation</option>
+            <option>Mobile App Development with Flutter</option>
+            <option>Data Analytics with Excel & Power BI</option>
           </select>
         </div>
         <button type="submit" class="submit-btn">Submit Admission</button>
@@ -425,9 +461,31 @@
       <form id="marketingForm" class="modal-form marketing-form" onsubmit="return handleSubmit(event, 'marketing')"
         style="display:none;">
 
-        <div class="form-group"><label>Full Name*</label><input type="text" required></div>
-        <div class="form-group"><label>Email*</label><input type="email" required></div>
-        <div class="form-group"><label>Phone Number*</label><input type="tel" pattern="[0-9]{10,15}" required></div>
+        <div class="form-group">
+  <label>Full Name*</label>
+  <input type="text" 
+         name="fullName" 
+         required 
+         pattern="[A-Za-z\s]{2,40}" 
+         title="Only letters allowed (2–40 characters)">
+</div>
+
+<div class="form-group">
+  <label>Email*</label>
+  <input type="email" 
+         name="email" 
+         required 
+         title="Enter a valid email (example@mail.com)">
+</div>
+
+<div class="form-group">
+  <label>Phone Number*</label>
+  <input type="tel" 
+         name="phone" 
+         required 
+         pattern="[0-9]{11}" 
+         title="Phone number must be exactly 11 digits">
+</div>
         <div class="form-group"><label>Reason for Query*</label><textarea required></textarea></div>
         <button type="submit" class="submit-btn">Submit Query</button>
       </form>
